@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<!--
+This is a barebones html file.
+The minimum markup you need.
+We can write CSS and JS inline. Within the tags style and script
+It is better (IMO) to write them in seprate files
+ -->
+<head>
+  <title>hello p5js</title>
+  <style type="text/css" media="screen">
+  /*This is inline CSS*/
+    body{
+      background-color: black;
+    }
+  </style>
+  <!-- include some external css -->
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <!-- include some external js -->
+  <script type="text/javascript" src="lib/p5.min.js" charset="utf-8"></script>
+  <!-- the line below includes a CDN -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.19/p5.min.js" charset="utf-8"></script> -->
+  <!-- the next one is our sketch -->
+  <script type="text/javascript" src="sketch.js" charset="utf-8"></script>
+</head>
+<body>
+
+  <div id="jimmy">
+  <!--
+  The p5js lib will add the canvas into this tag called jimmy.
+  We call it jimmy to see that we have a name we chose.
+   -->
+  </div>
+  <!--
+  the following is inline javascript
+  adding some on click event to the div
+   -->
+    <script type="text/javascript">
+    // You see the comments are now
+    // js style
+    function openUrl(){
+      location.href = "http://p5js.org";
+    }
+    console.log("This is inline javascript");
+    var canvas = document.getElementById("jimmy");
+    canvas.setAttribute("onclick", "openUrl()");
+    </script>
+</body>
+</html>
